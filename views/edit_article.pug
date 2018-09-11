@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1 #{title}
+  form(method='POST', action='/articles/edit/'+article._id)
+    #form-group
+      label Prize:
+      input.form-control(name='prize', type='text',value=article.prize)
+    #form-group
+      label Athlete:
+      input.form-control(name='athlete', type='text',value=article.athlete)
+    #form-group
+      label Desceibe:
+      textarea.form-control(name='describe')= article.describe
+    br
+    input.btn.btn-primary(type='submit',value='Submit')

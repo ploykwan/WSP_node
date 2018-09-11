@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  h1 #{title}
+  ul.list-group
+    each n in awards
+      li.list-group-item
+        a(href='/articles/'+n._id)= n.prize
